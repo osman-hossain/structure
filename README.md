@@ -192,3 +192,63 @@ int main()
 ```  
 <image src="./images/diff.png" width="500" title="different-angle"/>  
 
+### compare
+
+```c
+#include<stdio.h>
+struct person
+{
+    int age;
+    float salary;
+};
+int main()
+{
+    struct person person1={20,40000.50};
+    struct person person2,person3;
+
+    person2.age=30;
+    person2.salary=40000.60;
+
+    person3=person2;
+
+    if(person1.age==person2.age && person1.salary==person2.salary)
+    {
+        printf("Person 1 is equal to person 2.\n");
+    }
+    else
+    printf("Person 1 is not equal to person 2.\n");
+
+    getch();
+}
+```
+<image src="./images/notequal.png" width="500" title="not equal"/>  
+
+```c
+#include<stdio.h>
+struct person
+{
+    int age;
+    float salary;
+};
+int main()
+{
+    struct person person1={20,40000.50};
+    struct person person2,person3;
+
+    person2.age=30;
+    person2.salary=40000.60;
+
+    person3=person2;
+
+    if(person2.age==person3.age && person2.salary==person3.salary)
+    {
+        printf("Person 2 is equal to person 3.\n");
+    }
+    else
+    printf("Person 2 is not equal to person 3.\n");
+
+    getch();
+}
+```  
+![Equal](./images/equal.png)  
+</br>
