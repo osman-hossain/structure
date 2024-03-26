@@ -327,3 +327,44 @@ int main()
 ```  
 <image src="./images/stringarray.png" width="400" title="stringarray"/>  
 
+### function with structure
+
+```c
+#include<stdio.h>
+struct person
+{
+    char name[40];
+    int age;
+    float salary;
+};
+void display(struct person p[])
+{
+    for(int i=0; i<3; i++)
+    {
+        printf("Person %d\n\n",i+1);
+        printf("Name : %s\n",p[i].name);
+        printf("Age : %d\n",p[i].age);
+        printf("Salary : %.2f\n\n",p[i].salary);
+    }
+}
+int main()
+{
+    struct person person[3];
+    for(int i=0; i<3; i++)
+    {
+        printf("Enter the information for person %d\n\n",i+1);
+        printf("Name : ");
+        fflush(stdin);
+        gets(person[i].name);
+        printf("Age : ");
+        scanf("%d",&person[i].age);
+        printf("Salary : ");
+        scanf("%f",&person[i].salary);
+
+        printf("\n\n");
+        
+    }
+    display(person);
+}
+```  
+<image src="./images/functionstructure.png" width="500" title="function-structure"/>  
