@@ -252,3 +252,40 @@ int main()
 ```  
 ![Equal](./images/equal.png)  
 </br>
+
+### Structure with Array
+
+```c
+// write a programme that print structure using array
+#include<stdio.h>
+struct Person
+{
+    int age;
+    float salary;
+};
+int main()
+{
+    struct Person Person[4];
+
+    for(int i=0; i<4; i++)
+    {
+        printf("Enter the information of Person %d\n\n",i+1);
+        printf("Enter Age = ");
+        scanf("%d",&Person[i].age);
+        printf("Enter Salary = ");
+        scanf("%f",&Person[i].salary);
+    }
+
+    printf("\n\n");
+
+    for(int j=0; j<4; j++)
+    {
+        printf("Person %d\n\n",j+1);
+        printf("Age = %d\n",Person[j].age);
+        printf("Salary = %.2f\n\n",Person[j].salary);
+    }
+    getch();
+}
+```  
+<image src="./images/structurewitharray.png" width="500" title="structurewitharray"/>
+
