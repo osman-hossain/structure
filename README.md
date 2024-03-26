@@ -368,3 +368,27 @@ int main()
 }
 ```  
 <image src="./images/functionstructure.png" width="500" title="function-structure"/>  
+
+### union
+
+```c
+#include<stdio.h>
+union test
+{
+    int age,salary;
+};
+int main()
+{
+    union test t;
+
+    t.age=30;
+    printf("t.age = %d\n",t.age);
+    printf("t.salary = %d\n\n",t.salary);
+
+    t.salary= 5000;
+    printf("t.age = %d\n",t.age);
+    printf("t.salary = %d\n",t.salary);
+}
+```  
+<image src="./images/union.png" width="400" title="union"/>  
+
