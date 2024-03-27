@@ -392,3 +392,76 @@ int main()
 ```  
 <image src="./images/union.png" width="400" title="union"/>  
 
+### size of union & structure
+
+```c
+#include<stdio.h>
+union test1
+{
+    int a,b;
+};
+union test2
+{
+    int age;
+    char name;
+};
+union test3
+{
+    char world;
+    double salary;
+};
+struct test4
+{
+    int num;
+    float data;
+    double salary;
+    char name;
+};
+int main()
+{
+    union test1 test11;
+    union test2 test22;
+    union test3 test33;
+    struct test4 test44;
+    test11.a=1;
+    test11.b=3;
+    test22.age=55;
+    test22.name="rasel";
+    test33.salary=40000;
+    test33.world="world";
+    test44.data=44.4;
+    test44.name="anis";
+    test44.num=40;
+    test44.salary=50000.40;
+
+    printf("Union Test 1 : %d\n",sizeof(test11.a));
+    printf("Union Test 1 : %d\n",sizeof(test11.b));
+    printf("Union Test 2 : %d\n",sizeof(test22.age));
+    printf("Union Test 2 : %d\n",sizeof(test22.name));
+    printf("Union Test 3 : %d\n",sizeof(test33.world));
+    printf("Union Test 3 : %d\n",sizeof(test33.salary));
+    printf("Union Test 4 : %d\n",sizeof(test44.num));
+    printf("Union Test 4 : %d\n",sizeof(test44.data));
+    printf("Union Test 4 : %d\n",sizeof(test44.salary));
+    printf("Union Test 4 : %d\n",sizeof(test44.name));
+
+    printf("\n\nValue\n\n");
+
+    printf("Union Test 1 : %d\n",test11.a);
+    printf("Union Test 1 : %d\n",test11.b);
+    printf("Union Test 2 : %d\n",test22.age);
+    printf("Union Test 2 : %d\n",test22.name);
+    printf("Union Test 3 : %d\n",test33.world);
+    printf("Union Test 3 : %d\n",test33.salary);
+    printf("Union Test 4 : %d\n",test44.num);
+    printf("Union Test 4 : %d\n",test44.data);
+    printf("Union Test 4 : %d\n",test44.salary);
+    printf("Union Test 4 : %d\n",test44.name);
+
+    getch();
+}
+```
+
+<image src="./images/sizevalue.png" width="500" title="sizevalue"/>  
+
+<p style="text-align:left; color:purple;">size is not changing but the value of union is changed to the highest value.all the union values are high value equal but structure is not same . all the equal of value is called structrue</p>
