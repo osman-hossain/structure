@@ -465,3 +465,30 @@ int main()
 <image src="./images/sizevalue.png" width="500" title="sizevalue"/>  
 
 <p style="text-align:left; color:purple;">size is not changing but the value of union is changed to the highest value.all the union values are high value equal but structure is not same . all the equal of value is called structrue</p>
+
+### enumeration গণণা
+
+```c
+#include<stdio.h>
+enum days_of_week
+{
+    sat,sun,mon,tue,wed,thu,fri
+};
+int main()
+{
+    enum days_of_week day1,day2,day3;
+    day1=sat;
+    day2=mon;
+    day3=fri;
+    int diff = day3-day2;
+    
+    printf("Day 1 = %d\n",day1);
+    printf("Day 2 = %d\n",day2);
+    printf("Day 3 = %d\n",day3);
+    printf("difference Day 3 - Day 2 : %d - %d = %d\n",day2,day3,diff);
+
+    getch();
+}
+```
+![Enumeration](./images/enumeration.png)  
+
