@@ -492,3 +492,67 @@ int main()
 ```
 ![Enumeration](./images/enumeration.png)  
 
+### Typedef
+
+<p style="text-align:center; color:lightblue;"> any name can be use instead datatype </p>
+
+```c
+#include<stdio.h>
+int main()
+{
+    typedef char a;
+    a b='a';
+    a c='b';
+    a d='c';
+
+    printf("%c,%c,%c\n",b,c,d);
+
+    getchar();
+}
+```  
+<image src="./images/typedef.png" width="500" title="TypeDef"/>
+
+### Typedef with structute
+
+```c
+#include<stdio.h>
+struct group
+{
+    char a[20];
+    int b;
+    float c;
+};
+int main()
+{
+    typedef struct group Group;
+    Group person0 = {"sareng baraka",20,400.99};
+
+    Group person1 = {"rahim hossain",40,500.99};
+    Group person2 = {"karim islam",70,30500.99};
+
+
+        printf("Person 0\n\n");
+        printf("Name = %s\n",person0.a);
+        printf("Age = %d\n",person0.b);
+        printf("Salary = %.2f",person0.c);
+        printf("\n\n");
+
+        printf("Person 1\n\n");
+        printf("Name = %s\n",person1.a);
+        printf("Age = %d\n",person1.b);
+        printf("Salary = %.2f",person1.c);
+        printf("\n\n");
+
+        printf("Person 2\n\n");
+        printf("Name = %s\n",person2.a);
+        printf("Age = %d\n",person2.b);
+        printf("Salary = %.2f",person2.c);
+        printf("\n\n");
+
+
+
+    return 0;
+}
+```  
+![Typedef](./images/typedef1.png)  
+
